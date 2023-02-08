@@ -1,0 +1,24 @@
+#title-id {
+
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#response-id {
+
+
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.secret-num{
+
+    height: 100px;
+    width: 100px;
+    color: white;
+    background-color:black;  
+    font-size: 4rem;
+ 
+    
+}
