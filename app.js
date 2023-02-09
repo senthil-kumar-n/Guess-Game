@@ -13,7 +13,7 @@ document.querySelector('.score').textContent = score;
 
 //Generating Secret Number 
 let secretNumber = Math.floor(Math.random()*20);
-document.querySelector('.secret-num').textContent = secretNumber;
+document.querySelector('.secret-num').textContent = "?";
 
 //Click Button Function definition
 const cbtn = document.getElementById('cbtn-id');
@@ -37,6 +37,7 @@ document.getElementById('response-id').textContent = "Please enter Number to Pla
         document.getElementById('response-id').textContent = "Correct Answer";
         document.querySelector('.highscore').textContent = score;
         document.querySelector('body').style.backgroundColor= "green";
+        document.querySelector('.secret-num').textContent = secretNumber;
 
         
     }
@@ -76,6 +77,17 @@ document.getElementById('response-id').textContent = "Please enter Number to Pla
 })
 
 
-// let resbtn = document.querySelector(".reset");
+let resbtn = document.querySelector(".reset");
 
-// resbtn.addEventListener('click',function ()
+resbtn.addEventListener('click',function () {
+
+
+    console.log("Reset button pressed");
+    let score = 0;
+    document.querySelector('.score').textContent = score;    
+    let secretNumber = 0;
+    document.querySelector('.secret-num').textContent = secretNumber;
+    document.getElementById('user-input').value ="";
+    document.getElementById('response-id').textContent = "Start Playing the Game by Entering Number 1-20";
+    document.querySelector('.secret-num').textContent = "?";
+})
